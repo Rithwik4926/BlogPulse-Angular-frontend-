@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <h2>Sign Up</h2>
+  
+  @if (errorMessage) {
+      <div class="alert alert-danger">{{ errorMessage }}</div>
+  }
+
+  <div class="mb-3">
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="email" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="password" class="form-control" required />
+  </div>
+
+  <button (click)="register()" class="btn btn-primary">Register</button>
+</div>
